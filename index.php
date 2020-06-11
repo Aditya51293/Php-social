@@ -1,25 +1,11 @@
 <?php
 
-$conn=mysqli_connect("localhost:3309","root","","social");
+include("includes/headers.php");
+session_destroy();
 
-$query="INSERT INTO test VALUES(1,'aditya')";
-
-if(mysqli_connect_errno()){
-    echo "connection to db failed".mysqli_connect_errno();
-}
-
-$stmt=mysqli_query($conn,$query);
 
 ?>
 
-
-
-
-<html>
-<head>
-    <title>Swirlfeed</title>
-</head>
-
-<body>
+Hello <?php echo $users['first_name']; ?>
 </body>
 </html>
